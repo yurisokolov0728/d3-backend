@@ -187,7 +187,7 @@ module.exports.getCompanyPeerMap = async (req, res) => {
             {
               ticker_name: 'tata consultancy svcs ltd',
               ticker_market_cap: 133855000000,
-              signals_average: 0.857,
+              signals_average: -0.857,
               signals_count: 2049,
             },
             {
