@@ -716,12 +716,16 @@ module.exports.getCompanyScores = async (req, res) => {
         {
           ticker_id: 'ARAMCO AB',
           ticker_name: 'apple inc',
-          score: 0.36005422040268,
+          environmental_score: 0.36005422040268,
+          governance_score: -0.6005422040268,
+          social_score: 0.1005422040268,
         },
         {
           ticker_id: 'AMZN US',
           ticker_name: 'apple inc',
-          score: -0.56005422040268,
+          environmental_score: -0.36005422040268,
+          governance_score: 0.6005422040268,
+          social_score: -0.1005422040268,
         },
       ],
     })
