@@ -289,11 +289,17 @@ module.exports.getCompanyPeerMap = async (req, res) => {
               signals_count: 352,
             },
             {
-              ticker_name: 'tencent holdings ltd',
+              ticker_name: 'berkshire hathaway inc',
               ticker_market_cap: 735547000000.0,
               signals_average: -0.33,
               signals_count: 1445,
             },
+            // {
+            //   ticker_name: 'tencent holdings ltd',
+            //   ticker_market_cap: 735547000000.0,
+            //   signals_average: -0.33,
+            //   signals_count: 1445,
+            // },
           ],
         })
         break
@@ -409,6 +415,12 @@ module.exports.getCompanyPeerMap = async (req, res) => {
               ticker_name: 'audi ag',
               ticker_market_cap: 82846375936.0,
               signals_average: 0.569,
+              signals_count: 3760,
+            },
+            {
+              ticker_name: 'TSLA',
+              ticker_market_cap: 82846375936.0,
+              signals_average: 0.869,
               signals_count: 3760,
             },
           ],
