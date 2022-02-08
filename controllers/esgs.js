@@ -1,16 +1,6 @@
 module.exports.getCompanies = async (req, res) => {
   try {
     res.status(200).json([
-      // {
-      //   ticker_id: 'ARAMCO AB',
-      //   ticker_name: 'saudi arabian oil co',
-      //   industry_group: 'Oil&Gas',
-      // },
-      // {
-      //   ticker_id: 'AMZN US',
-      //   ticker_name: 'amazon.com inc',
-      //   industry_group: 'Internet',
-      // },
       {
         ticker_id: 'AAPL US',
         ticker_name: 'apple inc',
@@ -25186,6 +25176,224 @@ module.exports.getCompanyCumulativeScores = async (req, res) => {
             ],
           },
         ])
+        break
+    }
+  } catch (e) {
+    return res.status(422).json({
+      errors: { body: ['Could not get', e.message] },
+    })
+  }
+}
+
+module.exports.getCompanyDataPoints = async (req, res) => {
+  try {
+    const { company_id } = req.params
+
+    switch (company_id) {
+      case 'AAPL US':
+        res.status(200).json({
+          data_type: 'data_points',
+          data: {
+            ticker: 'AAPL US',
+            title: 'Data Points',
+            data: {
+              positive: {
+                Environmental: 730,
+                Governance: 794,
+                Social: 559,
+              },
+              negative: {
+                Environmental: 76,
+                Governance: 5519,
+                Social: 972,
+              },
+            },
+            caption: 'Useful for Green Washing Analysis',
+          },
+        })
+        break
+      case 'BABA US':
+        res.status(200).json({
+          data_type: 'data_points',
+          data: {
+            ticker: 'BRK_A US',
+            title: 'Data Points',
+            data: {
+              positive: {
+                Environmental: 59,
+                Governance: 119,
+                Social: 74,
+              },
+              negative: {
+                Environmental: 3,
+                Governance: 211,
+                Social: 17,
+              },
+            },
+            caption: 'Useful for Green Washing Analysis',
+          },
+        })
+        break
+      case 'FB US':
+        res.status(200).json({
+          data_type: 'data_points',
+          data: {
+            ticker: 'FB US',
+            title: 'Data Points',
+            data: {
+              positive: {
+                Environmental: 58,
+                Governance: 311,
+                Social: 84,
+              },
+              negative: {
+                Environmental: 7,
+                Governance: 1418,
+                Social: 172,
+              },
+            },
+            caption: 'Useful for Green Washing Analysis',
+          },
+        })
+        break
+      case 'MSFT US':
+        res.status(200).json({
+          data_type: 'data_points',
+          data: {
+            ticker: 'MSFT US',
+            title: 'Data Points',
+            data: {
+              positive: {
+                Environmental: 1544,
+                Governance: 2737,
+                Social: 2285,
+              },
+              negative: {
+                Environmental: 80,
+                Governance: 2248,
+                Social: 703,
+              },
+            },
+            caption: 'Useful for Green Washing Analysis',
+          },
+        })
+        break
+      case 'TSLA US':
+        res.status(200).json({
+          data_type: 'data_points',
+          data: {
+            ticker: 'TSLA US',
+            title: 'Data Points',
+            data: {
+              positive: {
+                Environmental: 1671,
+                Governance: 2047,
+                Social: 565,
+              },
+              negative: {
+                Environmental: 160,
+                Governance: 3425,
+                Social: 820,
+              },
+            },
+            caption: 'Useful for Green Washing Analysis',
+          },
+        })
+        break
+    }
+  } catch (e) {
+    return res.status(422).json({
+      errors: { body: ['Could not get', e.message] },
+    })
+  }
+}
+
+module.exports.getCompanyKeyInformation = async (req, res) => {
+  try {
+    const { company_id } = req.params
+
+    switch (company_id) {
+      case 'AAPL US':
+        res.status(200).json({
+          data_type: 'key_information',
+          data: {
+            name: 'apple inc',
+            industry: 'Computers',
+            country: 'United States',
+            market_cap: '1972 bn',
+            institutional_investors: 3208,
+            latest_emissions: '47430 MT| -10%',
+            sustainability_report:
+              'https_s/www.appe.com/environment/pdf/Apple_Environmental_Progress_Report_2021.pdf',
+            charities_supported: 3,
+            disclosure_score: 65,
+          },
+        })
+        break
+      case 'BABA US':
+        res.status(200).json({
+          data_type: 'key_information',
+          data: {
+            name: 'berkshire hathaway inc',
+            industry: 'Insurance',
+            country: 'United States',
+            market_cap: '536 bn',
+            institutional_investors: 0,
+            latest_emissions: 'None',
+            sustainability_report: 'None',
+            charities_supported: 'None',
+            disclosure_score: 'Not Disclosed',
+          },
+        })
+        break
+      case 'FB US':
+        res.status(200).json({
+          data_type: 'key_information',
+          data: {
+            name: 'berkshire hathaway inc',
+            industry: 'Insurance',
+            country: 'United States',
+            market_cap: '536 bn',
+            institutional_investors: 0,
+            latest_emissions: 'None',
+            sustainability_report: 'None',
+            charities_supported: 'None',
+            disclosure_score: 'Not Disclosed',
+          },
+        })
+        break
+      case 'MSFT US':
+        res.status(200).json({
+          data_type: 'key_information',
+          data: {
+            name: 'microsoft corp',
+            industry: 'Software',
+            country: 'United States',
+            market_cap: '1595 bn',
+            institutional_investors: 3457,
+            latest_emissions: 'None',
+            sustainability_report: 'None',
+            charities_supported: 'None',
+            disclosure_score: 'Not Disclosed',
+          },
+        })
+        break
+      case 'TSLA US':
+        res.status(200).json({
+          data_type: 'key_information',
+          data: {
+            name: 'tesla inc',
+            industry: 'Auto Manufacturers',
+            country: 'United States',
+            market_cap: '389 bn',
+            institutional_investors: 1838,
+            latest_emissions: 'None',
+            sustainability_report:
+              'https://www.tesla.com/ns_videos/2019-tesla-impact-report.pdf',
+            charities_supported: 0,
+            disclosure_score: 58,
+          },
+        })
         break
     }
   } catch (e) {
