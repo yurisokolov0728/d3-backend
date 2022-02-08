@@ -25348,18 +25348,16 @@ module.exports.getCompanyKeyInformation = async (req, res) => {
         break
       case 'FB US':
         res.status(200).json({
-          data_type: 'key_information',
-          data: {
-            name: 'berkshire hathaway inc',
-            industry: 'Insurance',
-            country: 'United States',
-            market_cap: '536 bn',
-            institutional_investors: 0,
-            latest_emissions: 'None',
-            sustainability_report: 'None',
-            charities_supported: 'None',
-            disclosure_score: 'Not Disclosed',
-          },
+          name: 'facebook inc a',
+          industry: 'Internet',
+          country: 'United States',
+          market_cap: '776 bn',
+          institutional_investors: 2833,
+          latest_emissions: '38000 MT| -85%',
+          sustainability_report:
+            'https://sustainability.fb.com/asset/2020-sustainability-report/',
+          charities_supported: 0,
+          disclosure_score: 'None',
         })
         break
       case 'MSFT US':
