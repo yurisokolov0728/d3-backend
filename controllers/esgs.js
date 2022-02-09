@@ -25193,10 +25193,10 @@ module.exports.getCompanyDataPoints = async (req, res) => {
       case 'AAPL US':
         res.status(200).json({
           data_type: 'data_points',
-          data: {
-            ticker: 'AAPL US',
-            title: 'Data Points',
-            data: {
+          ticker: 'AAPL US',
+          caption: 'Useful for Green Washing Analysis',
+          data: [
+            {
               positive: {
                 Environmental: 730,
                 Governance: 794,
@@ -25208,17 +25208,16 @@ module.exports.getCompanyDataPoints = async (req, res) => {
                 Social: 972,
               },
             },
-            caption: 'Useful for Green Washing Analysis',
-          },
+          ],
         })
         break
       case 'BABA US':
         res.status(200).json({
           data_type: 'data_points',
-          data: {
-            ticker: 'BRK_A US',
-            title: 'Data Points',
-            data: {
+          ticker: 'BRK_A US',
+          caption: 'Useful for Green Washing Analysis',
+          data: [
+            {
               positive: {
                 Environmental: 59,
                 Governance: 119,
@@ -25230,17 +25229,16 @@ module.exports.getCompanyDataPoints = async (req, res) => {
                 Social: 17,
               },
             },
-            caption: 'Useful for Green Washing Analysis',
-          },
+          ],
         })
         break
       case 'FB US':
         res.status(200).json({
           data_type: 'data_points',
-          data: {
-            ticker: 'FB US',
-            title: 'Data Points',
-            data: {
+          ticker: 'FB US',
+          caption: 'Useful for Green Washing Analysis',
+          data: [
+            {
               positive: {
                 Environmental: 58,
                 Governance: 311,
@@ -25252,17 +25250,16 @@ module.exports.getCompanyDataPoints = async (req, res) => {
                 Social: 172,
               },
             },
-            caption: 'Useful for Green Washing Analysis',
-          },
+          ],
         })
         break
       case 'MSFT US':
         res.status(200).json({
           data_type: 'data_points',
-          data: {
-            ticker: 'MSFT US',
-            title: 'Data Points',
-            data: {
+          caption: 'Useful for Green Washing Analysis',
+          ticker: 'MSFT US',
+          data: [
+            {
               positive: {
                 Environmental: 1544,
                 Governance: 2737,
@@ -25274,17 +25271,16 @@ module.exports.getCompanyDataPoints = async (req, res) => {
                 Social: 703,
               },
             },
-            caption: 'Useful for Green Washing Analysis',
-          },
+          ],
         })
         break
       case 'TSLA US':
         res.status(200).json({
           data_type: 'data_points',
-          data: {
-            ticker: 'TSLA US',
-            title: 'Data Points',
-            data: {
+          ticker: 'TSLA US',
+          caption: 'Useful for Green Washing Analysis',
+          data: [
+            {
               positive: {
                 Environmental: 1671,
                 Governance: 2047,
@@ -25296,8 +25292,7 @@ module.exports.getCompanyDataPoints = async (req, res) => {
                 Social: 820,
               },
             },
-            caption: 'Useful for Green Washing Analysis',
-          },
+          ],
         })
         break
     }
