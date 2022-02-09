@@ -23,7 +23,7 @@ module.exports.getCompanies = async (req, res) => {
       },
       {
         ticker_id: 'TSLA US',
-        ticker_name: 'TSLA',
+        ticker_name: 'tesla inc',
         industry_group: 'Software',
       },
     ])
@@ -405,12 +405,6 @@ module.exports.getCompanyPeerMap = async (req, res) => {
               ticker_name: 'audi ag',
               ticker_market_cap: 82846375936.0,
               signals_average: 0.569,
-              signals_count: 3760,
-            },
-            {
-              ticker_name: 'TSLA',
-              ticker_market_cap: 82846375936.0,
-              signals_average: 0.869,
               signals_count: 3760,
             },
           ],
@@ -25319,7 +25313,7 @@ module.exports.getCompanyKeyInformation = async (req, res) => {
             institutional_investors: 3208,
             latest_emissions: '47430 MT| -10%',
             sustainability_report:
-              'https_s/www.appe.com/environment/pdf/Apple_Environmental_Progress_Report_2021.pdf',
+              'https_s/www.apple.com/environment/pdf/Apple_Environmental_Progress_Report_2021.pdf',
             charities_supported: 3,
             disclosure_score: 65,
           },
