@@ -7,7 +7,7 @@ module.exports.getCompanies = async (req, res) => {
         industry_group: 'Computers',
       },
       {
-        ticker_id: 'BABA US',
+        ticker_id: 'BRK_A US',
         ticker_name: 'berkshire hathaway inc',
         industry_group: 'Insurance',
       },
@@ -679,7 +679,7 @@ module.exports.getCompanySubTopics = async (req, res) => {
             },
             {
               topic: 'social',
-              subtopic: 'product liability',
+              subtopic: 'product liabilityaaa(dfasfas)',
               company_sentiment: -0.504,
             },
           ],
